@@ -1,0 +1,62 @@
+.text-oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1000px;
+  height: 110px;
+  display: flex;
+  padding: 12px 20px 0;
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 800px;
+
+    .title {
+      font-size: 16px;
+      @extend .text-oneline;
+    }
+
+    .content {
+      width: 100%;
+      font-size: 14px;
+      color: #8a919f;
+      @extend .text-oneline;
+    }
+    .detail {
+      font-size: 14px;
+      color: #8a919f;
+      display: flex;
+      justify-content: space-between;
+
+      .left_d {
+        a {
+          margin-right: 20px;
+        }
+      }
+      .left_d,
+      .right_d {
+        a {
+          margin-right: 20px;
+          color: #8a919f;
+
+          &:hover {
+            color: #1074f7;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: 110px;
+    margin-left: 20px;
+  }
+}

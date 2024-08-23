@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 } */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
