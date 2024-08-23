@@ -1,0 +1,14 @@
+.main {
+    width: 100%;
+    display: flex;
+    background-color: black;
+}
+
+.main .left {
+    width: 200px;
+}
+
+.main .right {
+    flex: 1;
+    background-color: lightblue;
+}
