@@ -38,10 +38,26 @@ body {
   box-sizing: border-box;
 }
 
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: #f2f3f5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 input {
   outline: none;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
