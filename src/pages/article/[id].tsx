@@ -1,16 +1,21 @@
 import React from 'react'
 import styles from './index.module.scss';
 import jsonData from '../../../public/article_list.json';
+import fs from 'fs';
+import path from 'path';
+import { marked } from 'marked';
 
 interface IProps {
-    params: object
+    params: {
+        data: object,
+        article: string,
+    },
 }
 
 export default function index(props: IProps) {
     console.log('Iprops', props)
     return (
-        <div>
-            {111}
+        <div dangerouslySetInnerHTML={{ __html: props.params!.article }}>
         </div>
     )
 }
@@ -37,11 +42,18 @@ export async function getServerSideProps({ params }: any) {
     // 假设从数据库获取数据
     const { list } = jsonData;
     const data = list.find(({ id }) => (id == id));
-    const article = await import(`../../../public/articles/${id}.md`);
-    // console.log('article', article)
+    // const article = await import(`../../../public/articles/${id}.md`); // 缺点是可能设计到编码问题
+    // 读取 Markdown 文件内容
+    const filePath = path.join(process.cwd(), 'public', 'articles', `${id}.md`);
+    const fileContents = fs.readFileSync(filePath, 'utf8'); console.log('fileContents', fileContents)
+    const htmlContent = marked(fileContents);
     return {
         props: {
-            params: data,
+            params: {
+                data,
+                article: htmlContent,
+            },
+            // fileContents
         }
     }
 }
