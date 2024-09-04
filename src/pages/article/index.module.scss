@@ -1,0 +1,50 @@
+.container {
+    background-color: #f2f3f5;
+
+    .body {
+        display: flex;
+
+        .controls {
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .main {
+            flex: 1;
+            min-width: 320px;
+            background-color: #f2f3f5;
+
+            .article {
+                border-radius: 5px;
+                overflow: hidden;
+                padding: 0 20px;
+                background-color: white;
+
+                .detail {
+                    // display: flex;
+                    align-items: center;
+
+                    * {
+                        color: #8a919f;
+                    }
+
+                    *:nth-child(n+2) {
+                        // background-color: red;
+                        margin-left: 15px;
+                    }
+
+                    a:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            .comment {}
+        }
+
+        .help {
+            width: 200px;
+            margin-left: 20px;
+        }
+    }
+}

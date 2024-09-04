@@ -4,18 +4,61 @@ import jsonData from '../../../public/article_list.json';
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
+import Head from 'next/head';
+import Header from '@/app/myheader';
 
 interface IProps {
     params: {
-        data: object,
-        article: string,
+        article: {
+            author: string,
+            commentsCount: number,
+            content: string,
+            id: number,
+            imgurl: string,
+            likeCount: number,
+            readCount: number,
+            title: string,
+        },
+        contentHtml: string,
+        [key: string]: any, // 索引签名
     },
 }
 
-export default function index(props: IProps) {
-    console.log('Iprops', props)
+export default function index({ params }: IProps) {
+    console.log('params', params)
     return (
-        <div dangerouslySetInnerHTML={{ __html: props.params!.article }}>
+        <div className={styles.container}>
+            {/* <Head>
+                <link rel="stylesheet" href={`/themes/${params.theme}.css`} />
+                <link rel="stylesheet" href={`/highlights/${params.highlight}.css`} />
+            </Head> */}
+            <Header></Header>
+            <div className={styles.body}>
+                <div className={styles.controls}>111</div>
+                <div className={styles.main}>
+                    <div className={styles.article}>
+                        <h1>{params.article.title}</h1>
+                        <div className={styles.detail}>
+                            <a href='javascript:;'>{params.article.author}</a>
+                            <span>
+                                {/* <i className='iconfont icon-comment'></i> */}
+                                👀 {params.article.readCount}
+                            </span>
+                            <span>⌚️阅读6分钟</span>
+                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: params!.contentHtml }}></div>
+                    </div>
+                    <div className={styles.comment}>
+                        111
+                    </div>
+                </div>
+                <div className={styles.help}>
+                    111
+                </div>
+            </div>
         </div>
     )
 }
@@ -41,17 +84,28 @@ export async function getServerSideProps({ params }: any) {
     const { id } = params;
     // 假设从数据库获取数据
     const { list } = jsonData;
-    const data = list.find(({ id }) => (id == id));
+    const article = list.find(({ id }) => (id == id));
     // const article = await import(`../../../public/articles/${id}.md`); // 缺点是可能设计到编码问题
+
     // 读取 Markdown 文件内容
     const filePath = path.join(process.cwd(), 'public', 'articles', `${id}.md`);
-    const fileContents = fs.readFileSync(filePath, 'utf8'); console.log('fileContents', fileContents)
-    const htmlContent = marked(fileContents);
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    // const htmlContent = marked(fileContents);
+
+    // 使用 gray-matter 解析 markdown 文件中的元数据
+    const { data, content } = matter(fileContents);
+
+    // 使用 remark 将 markdown 转换为 html 字符串
+    const processedContent = await remark()
+        .use(html)
+        .process(content);
+    const contentHtml = processedContent.toString();
     return {
         props: {
             params: {
-                data,
-                article: htmlContent,
+                article,
+                contentHtml,
+                ...data,
             },
             // fileContents
         }

@@ -45,8 +45,9 @@ body {
   user-select: none;
 }
 
-body {
-  background-color: #f2f3f5;
+html {
+  background-color: #f2f3f5 !important;
+  /* background-color: red; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
