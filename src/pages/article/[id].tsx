@@ -36,7 +36,7 @@ export default function index(props: IProps) {
 // }
 
 // 编译的时候不执行，客户端请求当前页面时执行逻辑，并生成页面内容返回。
-// 每次动态生成，执行效率略低。
+// 每次动态生成，执行效率略低。test git 
 export async function getServerSideProps({ params }: any) {
     const { id } = params;
     // 假设从数据库获取数据
