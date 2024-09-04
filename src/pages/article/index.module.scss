@@ -1,3 +1,11 @@
+.card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 .container {
     background-color: #f2f3f5;
 
@@ -5,7 +13,7 @@
         display: flex;
 
         .controls {
-            width: 60px;
+            width: 100px;
             margin-right: 10px;
         }
 
@@ -21,7 +29,6 @@
                 background-color: white;
 
                 .detail {
-                    // display: flex;
                     align-items: center;
 
                     * {
@@ -29,7 +36,6 @@
                     }
 
                     *:nth-child(n+2) {
-                        // background-color: red;
                         margin-left: 15px;
                     }
 
@@ -43,8 +49,20 @@
         }
 
         .help {
-            width: 200px;
+            width: 300px;
             margin-left: 20px;
+
+            .aboutAuth {
+                @extend .card;
+            }
+
+            .catalogue {
+                @extend .card;
+            }
+
+            .recommend {
+                @extend .card;
+            }
         }
     }
 }

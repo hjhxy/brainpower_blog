@@ -56,7 +56,9 @@ export default function index({ params }: IProps) {
                     </div>
                 </div>
                 <div className={styles.help}>
-                    111
+                    <div className={styles.aboutAuth}>关于作者</div>
+                    <div className={styles.catalogue}>目录</div>
+                    <div className={styles.recommend}>推荐文章</div>
                 </div>
             </div>
         </div>
