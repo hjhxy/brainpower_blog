@@ -8,12 +8,24 @@
 
 .container {
     background-color: #f2f3f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
     .body {
         display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1290px;
+        min-width: 500px;
+        border: 1px solid red;
+        margin-top: 20px;
+
+
 
         .controls {
-            width: 100px;
+            width: 80px;
             margin-right: 10px;
         }
 
@@ -21,15 +33,21 @@
             flex: 1;
             min-width: 320px;
             background-color: #f2f3f5;
+            color: #252933;
 
             .article {
                 border-radius: 5px;
                 overflow: hidden;
-                padding: 0 20px;
+                padding: 30px;
                 background-color: white;
+
+                .title {
+                    margin: 0px 0px 10px;
+                }
 
                 .detail {
                     align-items: center;
+                    margin: 0px 0px 10px;
 
                     * {
                         color: #8a919f;
@@ -42,6 +60,15 @@
                     a:hover {
                         color: black;
                     }
+                }
+
+                .text {
+                    // color: red;
+                    text-indent: 2em;
+                    letter-spacing: 0.08em;
+                    line-height: 1.6;
+
+                    p {}
                 }
             }
 

@@ -1,82 +1,92 @@
-.container {
+.container-relative {
     width: 100%;
     min-width: 500px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    // background-color: white;
+    background-color: white;
     height: 60px;
+    position: relative;
 
-    .main {
-        height: 60px;
+    .position {
         width: 100%;
-        max-width: 1296px;
-        line-height: 60px;
-        display: flex;
         position: fixed;
         top: 0px;
-        background: linear-gradient(to left, white 0%, black 10%, black 90%, white 100%);
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
 
-        .left {
-            width: 200px;
-            color: white;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-weight: 500;
-            font-size: 20px;
-            text-align: center;
-        }
-    
-        .right {
-            color: white;
-            flex: 1;
+        .main {
+            height: 60px;
+            width: 100%;
+            max-width: 1410px;
+            line-height: 60px;
             display: flex;
+            top: 0px;
+            // background: linear-gradient(to left, #f2f3f5 0%, black 20%, black 80%, #f2f3f5 100%);
 
-            .search {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                input {
-                    height: 30px;
-                    width: 50%;
-                    max-width: 400px;
-                    border: none;
-                    border-radius: 5px;
-                    padding: 0px 10px;
-                }
+            .left {
+                width: 200px;
+                color: white;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+                text-align: center;
             }
 
-            .links {
-                width: 200px;
+            .right {
+                color: white;
+                flex: 1;
                 display: flex;
-                justify-content: center;
-                align-items: center;
 
-                .link {
-                    margin: 10px;
-                    // background-color: red;
+                .search {
+                    flex: 1;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border-radius: 15px;
-                    overflow: hidden;
 
-                    img:hover {
-                        width: 30px;
+                    input {
                         height: 30px;
-                        box-shadow: 2px 2px 5px 2px rgb(86, 202, 40);
-                    }                    
+                        width: 50%;
+                        max-width: 400px;
+                        border: 1px solid #d2d2d2;
+                        border-radius: 5px;
+                        padding: 15px 10px;
+                    }
+                }
+
+                .links {
+                    width: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .link {
+                        margin: 10px;
+                        // background-color: red;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 15px;
+                        overflow: hidden;
+
+                        img:hover {
+                            width: 30px;
+                            height: 30px;
+                            box-shadow: 2px 2px 5px 2px rgb(86, 202, 40);
+                        }
+                    }
                 }
             }
         }
     }
-    
 }
 
-.show{
+.show {
     transform: translateZ(0px);
 }
+
 .hide {
     transform: translateZ(0px);
 }

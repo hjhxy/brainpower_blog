@@ -27,26 +27,28 @@ const logout = {
 }
 export default function myheader() {
   return (
-    <div className={styles.container}>
-      <div className={styles.main}>
-        <div className={styles.left}><Link href="/">Branin Power Blogs</Link></div>
-        <div className={styles.right}>
-          <div className={styles.search}>
-            <input type="text" placeholder="输入文章关键词搜索..." />
-          </div>
-          <div className={styles.links}>
-            {links.map((link) => {
-              return (
-                <a className={styles.link} key={link.link} href={link.link}>
-                  {link.url ? (<Image
-                    src={link.url}
-                    width={30}
-                    height={30}
-                    alt="github"
-                  ></Image>) : (<span>{link.label}</span>)}
-                </a>
-              );
-            })}
+    <div className={styles['container-relative']}>
+      <div className={styles.position}>
+        <div className={styles.main}>
+          <div className={styles.left}><Link href="/">Branin Power Blogs</Link></div>
+          <div className={styles.right}>
+            <div className={styles.search}>
+              <input type="text" placeholder="输入文章关键词搜索..." />
+            </div>
+            <div className={styles.links}>
+              {links.map((link) => {
+                return (
+                  <a className={styles.link} key={link.link} href={link.link}>
+                    {link.url ? (<Image
+                      src={link.url}
+                      width={30}
+                      height={30}
+                      alt="github"
+                    ></Image>) : (<span>{link.label}</span>)}
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
