@@ -104,6 +104,9 @@ export default function index({ params }: { params: { id: string } }) {
                                 <span>粉丝</span>
                             </div>
                         </div>
+                        <div className={styles.buttons}>
+                            <Link href={'/person'} className={styles.person_btn}>关于作者</Link>
+                        </div>
                     </div>
                     <div className={styles.catalogue}>
                         目录

@@ -156,6 +156,26 @@
                         }
                     }
                 }
+
+                .buttons {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: center;
+
+
+                    .person_btn {
+                        display: block;
+                        width: 100%;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border: 1px solid #1e80ff;
+                        border-radius: 4px;
+                        color: white;
+                        background: #1e80ff;
+                        font-size: 14px;
+                    }
+                }
             }
 
             .catalogue {
