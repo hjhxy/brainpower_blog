@@ -9,6 +9,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Head from 'next/head';
 import Header from '@/app/myheader';
+import Link from 'next/link';
 
 interface IProps {
     // params: {
@@ -79,16 +80,44 @@ export default function index({ params }: { params: { id: string } }) {
                     </div>
                 </div>
                 <div className={styles.help}>
-                    <div className={styles.aboutAuth}>关于作者</div>
-                    <div className={styles.catalogue}>目录</div>
-                    <div className={styles.recommend}>推荐文章</div>
+                    <div className={styles.aboutAuth}>
+                        <Link className={styles.header} href={'/person'}>
+                            <div className={styles.left}>
+                                <img src="/imgs/testheader.webp" alt="头像" />
+                            </div>
+                            <div className={styles.right}>
+                                <h3>伍六七</h3>
+                                <p>如果你喜欢，可以叫我zxy</p>
+                            </div>
+                        </Link>
+                        <div className={styles.center}>
+                            <div>
+                                <span>10</span>
+                                <span>文章</span>
+                            </div>
+                            <div>
+                                <span>14k</span>
+                                <span>阅读</span>
+                            </div>
+                            <div>
+                                <span>31</span>
+                                <span>粉丝</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.catalogue}>
+                        目录
+                    </div>
+                    <div className={styles.recommend}>
+                        推荐文章
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-/* Nextjs 14.2 通过 generateStaticParams+use 动态获取 */
+/* Nextjs 14.2 通过 generateStaticParams + use 动态获取 */
 // 使用 generateStaticParams 生成静态路径
 export async function generateStaticParams() {
     const paths = jsonData.list.map((article: any) => ({ id: article.id + '' }));
