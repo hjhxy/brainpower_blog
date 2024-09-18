@@ -99,7 +99,46 @@
                 }
             }
 
-            .comment {}
+            .comment {
+                @extend .card;
+                margin-top: 20px;
+
+                .comment_header {
+                    .title {
+                        font-size: 17px;
+
+                    }
+
+                    .main {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        background-color: white;
+                        margin-top: 20px;
+
+                        textarea {
+                            border: 1px solid #1e80ff;
+                            outline: none;
+                            border-radius: 8px;
+                            padding: 5px;
+                        }
+
+                        .send {
+                            color: white;
+                            background-color: #1e80ff;
+                            border-radius: 4px;
+                            height: 34px;
+                            width: 100px;
+                            text-align: center;
+                            line-height: 34px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .help {
@@ -180,10 +219,54 @@
 
             .catalogue {
                 @extend .card;
+
+                .c_header {
+                    margin: 10px 0;
+                }
+
+                .c_body {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        font-size: 14px;
+                        color: #252933;
+
+                        &:nth-of-type(n+2) {
+                            margin-top: 10px;
+                        }
+
+                        &:hover {
+                            color: #1e80ff;
+                        }
+                    }
+                }
             }
 
             .recommend {
                 @extend .card;
+
+                .header {
+                    margin-bottom: 20px;
+                }
+
+                .r_body {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        font-size: 14px;
+                        color: #252933;
+
+                        &:nth-of-type(n+2) {
+                            margin-top: 10px;
+                        }
+
+                        &:hover {
+                            color: #1e80ff;
+                        }
+                    }
+                }
             }
         }
     }

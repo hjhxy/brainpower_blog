@@ -76,7 +76,13 @@ export default function index({ params }: { params: { id: string } }) {
                         <div className={styles.text} dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
                     </div>
                     <div className={styles.comment}>
-                        评论区
+                        <div className={styles.comment_header}>
+                            <h3 className={styles.title}>评论 68</h3>
+                            <div className={styles.main}>
+                                <textarea name="" id="" rows={4} cols={60} maxLength={1000} placeholder={'文明留言'}></textarea>
+                                <div className={styles.send}>发送</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.help}>
@@ -109,10 +115,24 @@ export default function index({ params }: { params: { id: string } }) {
                         </div>
                     </div>
                     <div className={styles.catalogue}>
-                        目录
+                        <div className={styles.c_header}>
+                            目录
+                        </div>
+                        <div className={styles.c_body}>
+                            <a href="#">Lexical</a>
+                            <a href="#">基本介绍</a>
+                            <a href="#">设计思想</a>
+                            <a href="#">最后</a>
+                        </div>
                     </div>
                     <div className={styles.recommend}>
-                        推荐文章
+                        <div className={styles.header}>推荐文章</div>
+                        <div className={styles.r_body}>
+                            <a href="#">手写Promise</a>
+                            <a href="#">ahooks：知你所难</a>
+                            <a href="#">每日知识积累</a>
+                            <a href="#">揭开JavaScript包装类的奥妙</a>
+                        </div>
                     </div>
                 </div>
             </div>
