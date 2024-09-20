@@ -7,15 +7,23 @@ import PersonCard from '../../components/personcard';
 
 export default function index() {
   const [persons, setPersons] = useState([
-    { name: 'zxy', age: 18, school: '深圳大学计算机与软件学院', avatarUrl: '', introduce: '' },
-    { name: 'ind', age: 20, school: '深圳大学计算机与软件学院', avatarUrl: '', introduce: '' },
-    { name: 'Lily', age: 17, school: '深圳大学计算机与软件学院', avatarUrl: '', introduce: '' },
+    { id: 1, name: 'zxy', age: 18, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
+    { id: 2, name: 'ind', age: 20, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
+    { id: 3, name: 'Lily', age: 17, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
+    { id: 4, name: 'zxy', age: 18, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
+    { id: 5, name: 'ind', age: 20, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
+    { id: 6, name: 'Lily', age: 17, school: '深圳大学计算机与软件学院', avatarUrl: '/imgs/testheader.webp', introduce: '' },
   ]);
   return (
     <div className={styles.container}>
       <MyHeader />
       <div className={styles.main}>
-        {persons.map((p) => (<PersonCard detail={p} />))}
+        <div className={styles.center}>
+          {persons.map((p) => (
+            <div className={styles.card} key={p.id}>
+              <PersonCard detail={p} />
+            </div>))}
+        </div>
       </div>
     </div>
   )
