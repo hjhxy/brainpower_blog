@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 2. 博客编辑（富文本，文章主题）。争取9.4号完成
 3. AI写作、AI文章解析。
 4. 国际化、主题切换。
-5. SSR优化。
+5. SEO优化。
 6. 文章订阅与消息推送。
 7. 登录逻辑（token，三方登录，token过期与无感替换）
 

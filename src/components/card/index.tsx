@@ -21,7 +21,7 @@ export default function index(props: IProps) {
         <p className={styles.content}>{props.content}</p>
         <div className={styles.detail}>
           <div className={styles.left_d}>
-            <a href="">{props.author}</a>
+            <a href="/person">{props.author}</a>
             <a href="">👀{props.readCount}</a>
             <a href="">👍{props.likeCount}</a>
           </div>
