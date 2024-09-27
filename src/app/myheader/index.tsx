@@ -1,9 +1,11 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-const links = [
+
+const baselinks = [
   {
     label: "github",
     link: "https://github.com/hjhxy",
@@ -14,18 +16,29 @@ const links = [
     link: "/about",
     // url: "/icons/github.png",
   },
-];
-const login = {
+]
+const loginlink = {
   label: "登录", // 已登录的用户才可以进入发表文章
   link: "/login",
   // url: "/icons/github.png",
 };
-const logout = {
+const logoutlink = {
   label: "退出登录",
   link: "/logout",
   // url: "/icons/github.png",
 }
+const editarticlelink = {
+  label: "编辑文章",
+  link: "/edit",
+  // url: "/icons/github.png",
+}
+
 export default function myheader() {
+  const [links, setLinks] = useState(baselinks);
+  const [isLogin, setIsLogin] = useState(true); // 假设已登录
+  useEffect(() => {
+    setLinks([...links, logoutlink, editarticlelink]);
+  }, [isLogin])
   return (
     <div className={styles['container-relative']}>
       <div className={styles.position}>
