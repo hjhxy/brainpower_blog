@@ -1,0 +1,51 @@
+$default-bg-color: #fafafa; // 默认背景色
+$default-color: rgba(0, 0, 0, 0.88); //  默认字体颜色
+$default-border-color: rgb(217, 217, 217);   // 默认边框颜色
+$default-padding: 0 7px;
+
+@import '../Common/style.scss';
+
+.we-tag {
+    margin-right: 10px;
+    padding: $default-padding;
+
+    &.we-tag-default {
+        color: $default-color;
+        background-color: $default-bg-color;
+        border: 1px solid $default-border-color;
+    }
+
+    &.we-tag-success {
+        color: $success-text-color;
+        background-color: $success-background-color;
+        border: 1px solid $success-border-color;
+    }
+
+    &.we-tag-warning {
+        color: $warning-text-color;
+        background-color: $warning-background-color;
+        border: 1px solid $warning-border-color;
+    }
+
+    &.we-tag-error {
+        color: $error-text-color;
+        background-color: $error-background-color;
+        border: 1px solid $error-border-color;
+    }
+
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 10px;
+        height: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}
+
+
