@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main {
+  width: 100%;
+  max-width: 1000px;
+}
+.container .main .wrapper {
+  width: 100%;
+}
+.container .main .wrapper .card {
+  cursor: pointer;
+  display: block;
+}
+.container .main .wrapper .card:hover {
+  background-color: red;
+}/*# sourceMappingURL=index.module.css.map */

@@ -1,0 +1,205 @@
+.card, .container .body .help .recommend, .container .body .help .catalogue, .container .body .help .aboutAuth, .container .body .main .comment {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: #f2f3f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .body {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1290px;
+  min-width: 500px;
+  margin-top: 20px;
+}
+.container .body .controls {
+  width: 80px;
+  margin-right: 10px;
+}
+.container .body .main {
+  flex: 1;
+  min-width: 320px;
+  background-color: #f2f3f5;
+  color: #252933;
+}
+.container .body .main .article {
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 30px;
+  background-color: white;
+}
+.container .body .main .article .title {
+  margin: 0px 0px 10px;
+}
+.container .body .main .article .detail {
+  align-items: center;
+  margin: 0px 0px 10px;
+}
+.container .body .main .article .detail * {
+  color: #8a919f;
+  font-size: 14px !important;
+}
+.container .body .main .article .detail *:nth-child(n+2) {
+  margin-left: 15px;
+}
+.container .body .main .article .detail a:hover {
+  color: black;
+}
+.container .body .main .article .text {
+  text-indent: 2em;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  margin-top: 40px;
+}
+.container .body .main .article .text p {
+  margin: 10px 0px;
+}
+.container .body .main .article .text h1 {
+  margin: 25px 0;
+}
+.container .body .main .article .text h2 {
+  margin: 20px 0px;
+}
+.container .body .main .article .text h3 {
+  margin: 15px 0px;
+}
+.container .body .main .article .text h4 {
+  margin: 10px 0px;
+}
+.container .body .main .article .text img {
+  margin: 0 auto;
+  display: block;
+  margin: 16px 0;
+}
+.container .body .main .comment {
+  margin-top: 20px;
+}
+.container .body .main .comment .comment_header .title {
+  font-size: 17px;
+}
+.container .body .main .comment .comment_header .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 20px;
+}
+.container .body .main .comment .comment_header .main textarea {
+  border: 1px solid #1e80ff;
+  outline: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+.container .body .main .comment .comment_header .main .send {
+  color: white;
+  background-color: #1e80ff;
+  border-radius: 4px;
+  height: 34px;
+  width: 100px;
+  text-align: center;
+  line-height: 34px;
+}
+.container .body .main .comment .comment_header .main .send:hover {
+  cursor: pointer;
+}
+.container .body .help {
+  width: 300px;
+  margin-left: 20px;
+}
+.container .body .help .aboutAuth .header {
+  display: flex;
+}
+.container .body .help .aboutAuth .header .left > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.container .body .help .aboutAuth .header .right {
+  margin-left: 10px;
+}
+.container .body .help .aboutAuth .header .right h3 {
+  font-size: 18px;
+}
+.container .body .help .aboutAuth .header .right p {
+  font-size: 14px;
+  color: #8a919f;
+}
+.container .body .help .aboutAuth .header:hover {
+  cursor: pointer;
+}
+.container .body .help .aboutAuth .center {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.container .body .help .aboutAuth .center > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .body .help .aboutAuth .center > div > span:nth-of-type(1) {
+  font-size: 16px;
+}
+.container .body .help .aboutAuth .center > div > span:nth-of-type(2) {
+  font-size: 14px;
+  color: #8a919f;
+}
+.container .body .help .aboutAuth .buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.container .body .help .aboutAuth .buttons .person_btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #1e80ff;
+  border-radius: 4px;
+  color: white;
+  background: #1e80ff;
+  font-size: 14px;
+}
+.container .body .help .catalogue .c_header {
+  margin: 10px 0;
+}
+.container .body .help .catalogue .c_body {
+  display: flex;
+  flex-direction: column;
+}
+.container .body .help .catalogue .c_body a {
+  font-size: 14px;
+  color: #252933;
+}
+.container .body .help .catalogue .c_body a:nth-of-type(n+2) {
+  margin-top: 10px;
+}
+.container .body .help .catalogue .c_body a:hover {
+  color: #1e80ff;
+}
+.container .body .help .recommend .header {
+  margin-bottom: 20px;
+}
+.container .body .help .recommend .r_body {
+  display: flex;
+  flex-direction: column;
+}
+.container .body .help .recommend .r_body a {
+  font-size: 14px;
+  color: #252933;
+}
+.container .body .help .recommend .r_body a:nth-of-type(n+2) {
+  margin-top: 10px;
+}
+.container .body .help .recommend .r_body a:hover {
+  color: #1e80ff;
+}/*# sourceMappingURL=index.module.css.map */

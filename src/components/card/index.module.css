@@ -1,0 +1,52 @@
+.text-oneline, .container .left .content, .container .left .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1000px;
+  height: 110px;
+  display: flex;
+  padding: 12px 20px 0;
+}
+.container .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 800px;
+}
+.container .left .title {
+  font-size: 16px;
+}
+.container .left .content {
+  width: 100%;
+  font-size: 14px;
+  color: #8a919f;
+}
+.container .left .detail {
+  font-size: 14px;
+  color: #8a919f;
+  display: flex;
+  justify-content: space-between;
+}
+.container .left .detail .left_d a {
+  margin-right: 20px;
+}
+.container .left .detail .left_d a,
+.container .left .detail .right_d a {
+  margin-right: 20px;
+  color: #8a919f;
+}
+.container .left .detail .left_d a:hover,
+.container .left .detail .right_d a:hover {
+  color: #1074f7;
+}
+.container .right {
+  width: 110px;
+  margin-left: 20px;
+}/*# sourceMappingURL=index.module.css.map */

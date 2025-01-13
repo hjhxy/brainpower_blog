@@ -1,0 +1,12 @@
+.container .main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .center {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 1000px;
+}/*# sourceMappingURL=index.module.css.map */
