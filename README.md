@@ -21,6 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 5. SEO优化。
 6. 文章订阅与消息推送。
 7. 登录逻辑（token，三方登录，token过期与无感替换）
+8. 多端支持（移动端、web）
 
 ### 技术选型
 

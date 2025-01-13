@@ -1,6 +1,6 @@
-import MyHeader from './myheader';
-import MyBody from './mybody'
-import MyFooter from './myfooter'
+import MyHeader from '../layout/myheader';
+import MyBody from '../layout/mybody'
+import MyFooter from '../layout/myfooter'
 import styles from './page.module.scss';
 
 export default function Home() {

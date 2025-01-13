@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './index.module.scss';
-import MyHeader from '../myheader';
+import MyHeader from '../../layout/myheader';
 
 export default function index() {
     return (

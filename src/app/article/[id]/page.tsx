@@ -8,7 +8,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Head from 'next/head';
-import Header from '@/app/myheader';
+import Header from '@/layout/myheader';
 import Link from 'next/link';
 
 interface IProps {
@@ -148,7 +148,7 @@ export async function generateStaticParams() {
 }
 
 // 只有在编译打包代码的时候执行一次，即一次性生成所有页面，后续不运行。
-// 缺点是如果数据库有更新的话每次都需要重新打包代码(也可以设置revalidate间隔时间，在指定时间间隔内打包)。
+// 缺点是如果数据库有更新的话每次都需要重新打包代码(也可以设置revalidate间隔时间，在指定时间间隔内重新打包)。
 // 但是就算设置了间隔也没有办法保证及时更新，比如有实时点赞，刷新后访问仍然未更新。
 // 如果实时性不强推荐使用，渲染效率较高.
 // export async function getStaticProps({ params }: any) {

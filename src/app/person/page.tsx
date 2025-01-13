@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './index.module.scss';
-import MyHeader from '../myheader';
+import MyHeader from '../../layout/myheader';
 import Card from '../../components/card';
 import jsonData from '../../../public/article_list.json';
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import styles from './index.module.scss';
-import MyHeader from '../myheader/index';
+import MyHeader from '../../layout/myheader/index';
 import PersonCard from '../../components/personcard';
 
 export default function index() {
